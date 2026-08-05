@@ -1,0 +1,87 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_rename": 1,
+ "autoname": "format: JP-.###",
+ "creation": "2026-08-05 16:19:45.367417",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "role",
+  "no_of_openings",
+  "required_experience",
+  "skills",
+  "package",
+  "availablle"
+ ],
+ "fields": [
+  {
+   "fieldname": "role",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Role",
+   "reqd": 1
+  },
+  {
+   "fieldname": "no_of_openings",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "No Of Openings",
+   "reqd": 1
+  },
+  {
+   "fieldname": "required_experience",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Required Experience",
+   "reqd": 1
+  },
+  {
+   "fieldname": "skills",
+   "fieldtype": "Data",
+   "label": "Skills",
+   "reqd": 1
+  },
+  {
+   "fieldname": "package",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Package",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "availablle",
+   "fieldtype": "Check",
+   "label": "Available"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-08-05 16:29:12.182338",
+ "modified_by": "Administrator",
+ "module": "Hireflow",
+ "name": "Job Post",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

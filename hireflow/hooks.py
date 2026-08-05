@@ -1,3 +1,4 @@
+import frappe
 app_name = "hireflow"
 app_title = "Hireflow"
 app_publisher = "Boobesh"
@@ -8,6 +9,13 @@ app_license = "mit"
 # Send non-GET requests for this app's endpoints as native `application/json`
 # bodies instead of form-encoded, per-key JSON-stringified values.
 use_json_request_body = True
+
+permission_query_conditions = {
+    "Employee": "hireflow.hireflow.doctype.employee.employee.get_permission_query_conditions",
+}
+has_permission = {
+    "Employee": "hireflow.hireflow.doctype.employee.employee.has_permission"
+}
 
 # Apps
 # ------------------
