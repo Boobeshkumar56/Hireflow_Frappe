@@ -16,6 +16,12 @@ permission_query_conditions = {
 has_permission = {
     "Employee": "hireflow.hireflow.doctype.employee.employee.has_permission"
 }
+doc_events={
+    "Test Document":{
+        "on_update":"hireflow.api.success_message"
+    }
+}
+
 
 # Apps
 # ------------------
