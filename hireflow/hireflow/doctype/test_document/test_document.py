@@ -24,3 +24,4 @@ class TestDocument(Document):
 			self.description="Default description"
 	def on_update(self):
 		frappe.toast("After save called")
+	

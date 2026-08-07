@@ -16,9 +16,7 @@ class JobApplications(Document):
 
 		applicant: DF.Link
 		job_post: DF.Link
-		parent: DF.Data
-		parentfield: DF.Data
-		parenttype: DF.Data
+		verified: DF.Check
 	# end: auto-generated types
 
 	_DOCTYPE_NAME = "Job Applications"
