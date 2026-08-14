@@ -1,0 +1,79 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_rename": 1,
+ "creation": "2026-08-10 10:10:05.719990",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "expenses_list_section",
+  "expense_type",
+  "other_expense",
+  "date_of_spending",
+  "amount",
+  "description",
+  "receipt"
+ ],
+ "fields": [
+  {
+   "fieldname": "expenses_list_section",
+   "fieldtype": "Section Break",
+   "label": "Expenses List"
+  },
+  {
+   "fieldname": "expense_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Expense Type",
+   "options": "Commute\nAccommodation\nFood\nOthers",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.expense_type==\"Others\"",
+   "fieldname": "other_expense",
+   "fieldtype": "Data",
+   "label": "Other Expense",
+   "mandatory_depends_on": "eval:doc.expense_type==\"Others\""
+  },
+  {
+   "fieldname": "date_of_spending",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date of Spending",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "label": "Amount"
+  },
+  {
+   "fieldname": "receipt",
+   "fieldtype": "Attach",
+   "in_list_view": 1,
+   "label": "Receipt",
+   "reqd": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text",
+   "label": "Description"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2026-08-10 13:22:12.971588",
+ "modified_by": "Administrator",
+ "module": "Hireflow",
+ "name": "Expense List",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

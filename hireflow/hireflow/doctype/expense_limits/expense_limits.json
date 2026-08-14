@@ -1,0 +1,65 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_rename": 1,
+ "creation": "2026-08-12 16:34:07.122691",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "employee",
+  "lead",
+  "manager"
+ ],
+ "fields": [
+  {
+   "default": "10000",
+   "fieldname": "employee",
+   "fieldtype": "Int",
+   "label": "Employee Limit",
+   "non_negative": 1,
+   "read_only": 1
+  },
+  {
+   "default": "20000",
+   "fieldname": "manager",
+   "fieldtype": "Int",
+   "label": "Manager Limit",
+   "non_negative": 1,
+   "read_only": 1
+  },
+  {
+   "default": "15000",
+   "fieldname": "lead",
+   "fieldtype": "Int",
+   "label": "Team Lead Limit",
+   "non_negative": 1,
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2026-08-13 12:56:24.092852",
+ "modified_by": "Administrator",
+ "module": "Hireflow",
+ "name": "Expense Limits",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

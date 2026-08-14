@@ -1,0 +1,188 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_rename": 1,
+ "autoname": "EX-SHEET-.###",
+ "creation": "2026-08-10 10:03:55.263899",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_toxi",
+  "amended_from",
+  "employee_id",
+  "name1",
+  "department",
+  "team_lead",
+  "manager",
+  "expenses_table",
+  "total_sum",
+  "current_status",
+  "team_lead_status",
+  "team_lead_comment",
+  "manager_status",
+  "manager_comment",
+  "finance_status",
+  "finance_failure_reason"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_toxi",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Expense",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "employee_id",
+   "fieldtype": "Link",
+   "label": "Employee id",
+   "options": "Employee",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee_id.employee_name",
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "label": "Name",
+   "options": "Name"
+  },
+  {
+   "fetch_from": "employee_id.department",
+   "fieldname": "department",
+   "fieldtype": "Data",
+   "label": "Department"
+  },
+  {
+   "fetch_from": "employee_id.manager",
+   "fieldname": "manager",
+   "fieldtype": "Data",
+   "label": "Manager"
+  },
+  {
+   "fieldname": "expenses_table",
+   "fieldtype": "Table",
+   "label": "Expenses Table",
+   "options": "Expense List"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "Team Lead Review",
+   "fieldname": "current_status",
+   "fieldtype": "Select",
+   "label": "Current Status",
+   "options": "Team Lead Review\nManager Review\nFinance Processing\nProcessed\nDeclined",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "Pending",
+   "fieldname": "team_lead_status",
+   "fieldtype": "Select",
+   "label": "Team Lead Status",
+   "options": "Pending\nAccepted\nDeclined\nCommented",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "team_lead_comment",
+   "fieldtype": "Small Text",
+   "label": "Team Lead Comment",
+   "placeholder": "Comments will appear here"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "Pending",
+   "fieldname": "manager_status",
+   "fieldtype": "Select",
+   "label": "Manager Status",
+   "options": "Pending\nAccepted\nDeclined\nCommented",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "manager_comment",
+   "fieldtype": "Small Text",
+   "label": "Manager Comment",
+   "placeholder": "Comments will appear here"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "Pending",
+   "fieldname": "finance_status",
+   "fieldtype": "Select",
+   "label": "Finance Status",
+   "options": "Pending\nIn Process\nFailed\nProcessed",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+    "depends_on": "eval:doc.finance_status==\"Failed\"",
+   "fieldname": "finance_failure_reason",
+   "fieldtype": "Small Text",
+   "label": "Finance Failure Reason",
+    "mandatory_depends_on": "eval:doc.finance_status==\"Failed\"",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "team_lead",
+   "fieldtype": "Link",
+   "label": "Team lead",
+   "options": "Employee",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_sum",
+   "fieldtype": "Currency",
+   "read_only": 1,
+   "label": "Total Sum",
+   "non_negative": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-08-11 15:14:55.573719",
+ "modified_by": "Administrator",
+ "module": "Hireflow",
+ "name": "Expense",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Manager",
+   "share": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

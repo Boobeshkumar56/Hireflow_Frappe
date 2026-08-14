@@ -1,0 +1,34 @@
+{
+ "attach_files": "",
+ "attach_print": 0,
+ "channel": "System Notification",
+ "condition_type": "Python",
+ "creation": "2026-08-12 10:54:28.228109",
+ "days_in_advance": 0,
+ "docstatus": 0,
+ "doctype": "Notification",
+ "document_type": "Expense",
+ "enabled": 1,
+ "event": "Value Change",
+ "idx": 0,
+ "is_standard": 1,
+ "message": "Add your message here",
+ "message_type": "Markdown",
+ "minutes_offset": 0,
+ "modified": "2026-08-12 10:54:28.228109",
+ "modified_by": "Administrator",
+ "module": "Hireflow",
+ "name": "Approval Notification",
+ "notification_message": "Your Expense request {{doc.name}} is Updated.\n\nThe Status is updated to {{doc.current_status}}.",
+ "notification_title": "Your Expesense request status is updated.",
+ "notification_type": "Alert",
+ "owner": "Administrator",
+ "recipients": [
+  {
+   "receiver_by_document_field": "owner"
+  }
+ ],
+ "send_system_notification": 0,
+ "send_to_all_assignees": 0,
+ "value_changed": "current_status"
+}

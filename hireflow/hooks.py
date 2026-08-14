@@ -6,23 +6,27 @@ app_description = "This is a demo project"
 app_email = "test@gmail"
 app_license = "mit"
 
+
 # Send non-GET requests for this app's endpoints as native `application/json`
 # bodies instead of form-encoded, per-key JSON-stringified values.
 use_json_request_body = True
 
 permission_query_conditions = {
-    "Employee": "hireflow.hireflow.doctype.employee.employee.get_permission_query_conditions",
+   "Approval":"hireflow.permission.expense_approval_query",
+   "Expense":"hireflow.permission.expense_list_query",
+   "Employee":"hireflow.permission.employee_list_query",
 }
-has_permission = {
-    "Employee": "hireflow.hireflow.doctype.employee.employee.has_permission"
-}
+
 doc_events={
     "Test Document":{
         "on_update":"hireflow.api.success_message"
     }
 }
 
-
+scheduler_events={
+    "hourly":"hireflow.hireflow.api.approval_reminder"
+    
+}
 # Apps
 # ------------------
 
