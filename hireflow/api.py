@@ -1,7 +1,6 @@
 import frappe
 from collections import defaultdict
 from frappe.query_builder import DocType
-from groq import Groq
 import base64
 import json
 import os
@@ -114,6 +113,8 @@ def get_approver(Expense):
 
   
 def get_receipt_data(image_path,values=None):
+    from groq import Groq
+
     site_path = frappe.get_site_path()
     # If image_path starts with '/', os.path.join will ignore site_path.
     # Normalize leading slash so file URLs like /private/files/x.jpg are resolved under site.

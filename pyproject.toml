@@ -1,7 +1,7 @@
 [project]
 name = "hireflow"
 authors = [
-    { name = "Boobesh", email = "test@gmail"}
+    { name = "Boobesh", email = "boobeshkumar6109@gmail"}
 ]
 description = "This is a demo project"
 requires-python = ">=3.14"
@@ -9,6 +9,7 @@ readme = "README.md"
 dynamic = ["version"]
 dependencies = [
     # "frappe~=16.0.0" # Installed and managed by bench.
+    "groq>=1.6.0",
 ]
 
 [build-system]
