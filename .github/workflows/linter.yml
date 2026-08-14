@@ -53,6 +53,12 @@ jobs:
             ${{ runner.os }}-pip-
             ${{ runner.os }}-
 
+      - name: Install app dependencies
+        run: |
+          if [ -f "${GITHUB_WORKSPACE}/apps/hireflow/requirements.txt" ]; then
+            pip install -r "${GITHUB_WORKSPACE}/apps/hireflow/requirements.txt"
+          fi
+
       - name: Install and run pip-audit
         run: |
           pip install pip-audit

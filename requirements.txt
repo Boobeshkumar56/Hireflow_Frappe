@@ -1,0 +1,3 @@
+# Runtime dependencies for the Hireflow app
+# Frappe and the bench-managed app stack are installed by bench.
+groq>=1.6.0
