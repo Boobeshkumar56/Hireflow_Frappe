@@ -55,7 +55,9 @@ jobs:
 
       - name: Install app dependencies
         run: |
-          if [ -f "${GITHUB_WORKSPACE}/apps/hireflow/requirements.txt" ]; then
+          if [ -f "${GITHUB_WORKSPACE}/requirements.txt" ]; then
+            pip install -r "${GITHUB_WORKSPACE}/requirements.txt"
+          elif [ -f "${GITHUB_WORKSPACE}/apps/hireflow/requirements.txt" ]; then
             pip install -r "${GITHUB_WORKSPACE}/apps/hireflow/requirements.txt"
           fi
 

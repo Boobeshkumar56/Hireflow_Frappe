@@ -89,7 +89,13 @@ jobs:
         working-directory: /home/runner/frappe-bench
         run: |
           bench get-app hireflow $GITHUB_WORKSPACE
-          pip install -r "$GITHUB_WORKSPACE/apps/hireflow/requirements.txt"
+
+          if [ -f "$GITHUB_WORKSPACE/requirements.txt" ]; then
+            pip install -r "$GITHUB_WORKSPACE/requirements.txt"
+          elif [ -f "$GITHUB_WORKSPACE/apps/hireflow/requirements.txt" ]; then
+            pip install -r "$GITHUB_WORKSPACE/apps/hireflow/requirements.txt"
+          fi
+
           bench setup requirements --dev
           bench new-site --db-root-password root --admin-password admin test_site
           bench --site test_site install-app hireflow
