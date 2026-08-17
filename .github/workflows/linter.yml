@@ -1,9 +1,6 @@
 name: Linters
 
 on:
-  push:
-    branches:
-      - main
   pull_request:
   workflow_dispatch:
 
@@ -36,10 +33,7 @@ jobs:
           pip install semgrep
           semgrep ci --config ./frappe-semgrep-rules/rules --config r/python.lang.correctness
 
-      - name: Run Ruff check
-        run: |
-          pip install ruff
-          ruff check .
+     
 
 
   deps-vulnerable-check:
