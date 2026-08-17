@@ -33,6 +33,12 @@ jobs:
           pip install semgrep
           semgrep ci --config ./frappe-semgrep-rules/rules --config r/python.lang.correctness
 
+      - name: Run Ruff check
+        run: |
+          pip install ruff
+          ruff check .
+
+
   deps-vulnerable-check:
     name: 'Vulnerable Dependency Check'
     runs-on: ubuntu-latest

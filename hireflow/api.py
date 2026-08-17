@@ -3,7 +3,7 @@ import json
 import mimetypes
 import os
 from collections import defaultdict
-
+from collections import namedtuple
 import frappe
 from frappe.query_builder import DocType
 from frappe.utils import add_days, get_datetime, now_datetime
