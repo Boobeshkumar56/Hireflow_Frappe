@@ -13,6 +13,7 @@ class Team(Document):
 
 	if TYPE_CHECKING:
 		from frappe.types import DF
+
 		from hireflow.hireflow.doctype.team_members.team_members import TeamMembers
 
 		table_members: DF.Table[TeamMembers]

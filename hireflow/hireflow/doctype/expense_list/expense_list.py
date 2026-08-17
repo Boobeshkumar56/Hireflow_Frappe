@@ -3,7 +3,9 @@
 
 import frappe
 from frappe.model.document import Document
+
 from hireflow.api import get_receipt_data
+
 
 class ExpenseList(Document):
 	# begin: auto-generated types

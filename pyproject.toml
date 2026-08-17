@@ -10,6 +10,8 @@ dynamic = ["version"]
 dependencies = [
     # "frappe~=16.0.0" # Installed and managed by bench.
     "groq>=1.6.0",
+    "pytest>=9.1.1",
+    "ruff>=0.16.3",
 ]
 
 [build-system]

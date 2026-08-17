@@ -1,5 +1,8 @@
 import frappe
+
 from hireflow.api import get_empid
+
+
 def expense_approval_query(user):
     if frappe.session.user=="Administrator":
         return ""
@@ -22,7 +25,6 @@ def employee_list_query(user):
     if not employee:
         return "1=0"
     return f"`tabEmployee`.name = {frappe.db.escape(employee)}"
-      
-    
-	
-	
+
+
+

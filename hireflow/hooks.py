@@ -1,4 +1,5 @@
 import frappe
+
 app_name = "hireflow"
 app_title = "Hireflow"
 app_publisher = "Boobesh"
@@ -25,7 +26,7 @@ doc_events={
 
 scheduler_events={
     "hourly":"hireflow.hireflow.api.approval_reminder"
-    
+
 }
 # Apps
 # ------------------

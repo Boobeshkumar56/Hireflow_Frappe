@@ -36,5 +36,5 @@ class Manager(Document):
 		employee.insert()
 		self.employee_id=employee.name
 		frappe.msgprint("New employee created for manager")
-		
+
 

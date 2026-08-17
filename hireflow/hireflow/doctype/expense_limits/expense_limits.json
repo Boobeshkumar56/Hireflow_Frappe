@@ -12,35 +12,32 @@
  ],
  "fields": [
   {
-   "default": "10000",
+   "default": "5000",
    "fieldname": "employee",
    "fieldtype": "Int",
    "label": "Employee Limit",
-   "non_negative": 1,
-   "read_only": 1
-  },
-  {
-   "default": "20000",
-   "fieldname": "manager",
-   "fieldtype": "Int",
-   "label": "Manager Limit",
-   "non_negative": 1,
-   "read_only": 1
+   "non_negative": 1
   },
   {
    "default": "15000",
+   "fieldname": "manager",
+   "fieldtype": "Int",
+   "label": "Manager Limit",
+   "non_negative": 1
+  },
+  {
+   "default": "10000",
    "fieldname": "lead",
    "fieldtype": "Int",
    "label": "Team Lead Limit",
-   "non_negative": 1,
-   "read_only": 1
+   "non_negative": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2026-08-13 12:56:24.092852",
+ "modified": "2026-08-17 12:45:53.571287",
  "modified_by": "Administrator",
  "module": "Hireflow",
  "name": "Expense Limits",

@@ -33,7 +33,7 @@ class Approval(Document):
 		print(employee)
 		if not employee:
 			return False
-		return employee==self.approver 
+		return employee==self.approver
 	def on_submit(self):
 		notify_user(self)
 
@@ -126,7 +126,6 @@ def notify_user(approval:Approval):
 
 
 
-		
 
 
 
@@ -137,6 +136,7 @@ def notify_user(approval:Approval):
 
 
 
-	
+
+
 
 

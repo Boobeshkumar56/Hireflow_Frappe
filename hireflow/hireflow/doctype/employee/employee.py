@@ -3,10 +3,13 @@
 
 import frappe
 from frappe.model.document import Document
-from hireflow.api import get_empid
 from frappe.query_builder import DocType
 from frappe.query_builder.functions import Sum
-from frappe.utils import today,get_first_day,get_last_day
+from frappe.utils import get_first_day, get_last_day, today
+
+from hireflow.api import get_empid
+
+
 class Employee(Document):
 	# begin: auto-generated types
 	# This code is auto-generated. Do not modify anything in this block.
